@@ -2,6 +2,7 @@ import {Routes, Route, Link } from 'react-router-dom'
 // import React from 'react'
 import NotFound from './routes/NotFound';
 import Home from './routes/Home';
+import Step2 from './routes/Step2';
 
 
 
@@ -65,6 +66,8 @@ function App() {
 
       <Routes>
       <Route path="/" index element={<Home />} />
+      <Route path="/step2" index element={<Step2 />} />
+      
       <Route path="*" element={<NotFound />} />
       </Routes>
       </div>
