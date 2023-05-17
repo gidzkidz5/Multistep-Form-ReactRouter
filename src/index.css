@@ -1,69 +1,228 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+figure,
+picture,
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    margin: 0; 
+    padding: 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+:root {
+
+/* Colors */
+   
+--clr-marineblue: 213 96% 18%;
+--clr-purplishblue: 243 100% 62%;
+--clr-pastelblue: 228 100% 84%;
+--clr-lightblue: 206 94% 87%;
+--clr-strawberryred: 354 84% 57%;
+
+
+--clr-Coolgray: 231 11% 63%;
+--clr-Lightgray: 229 24% 87%;
+--clr-Magnolia: 217 100% 97%;
+--clr-Alabaster: 231 100% 99%;
+--clr-White: 0 0% 100%;
+
+/* font-families */
+
+--ff-sanserif: 'Ubuntu', sans-serif;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Utility Classes */
+
+.flex {
+    display: flex;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.uppercase {
+    text-transform: uppercase;
+}
+
+.ff-sanserif {
+    font-family: var(--ff-sanserif);
+}
+
+/* nav+form */
+body {
+    background-color: #EFF5FF;
+    height: 100vh;
+}
+main {
+    justify-content: center;
+    align-items: center;
+    height: 99.8vh;
+   
+}
+#nav-form {
+    width: 65.28vw;
+    height: 74vh;
+    max-width: 940px;
+    max-height: 600px;
+    padding: 1rem;
+    background-color: #FFF;
+    gap: 14%;
+}
+
+/* header */
+@media only screen and (min-width: 45em) {
+
+
+header {
+    background-image: url('assets/bg-sidebar-desktop.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding-left: max(2rem, 5vh);
+    padding-right: min(30%, 90px);
+    padding-top: max(6%,30px);
+
+    min-width: 29.3%;
+    
+    border-radius: 10px;
+
+}
+}
+
+ 
+
+ul{
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+li {
+    margin-bottom: max(2rem,12%);
+}
+
+.link {
+    text-decoration: none;
+ }
+
+.link > div {
+    gap: 1rem;
+}
+
+.circular-button {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+    color: #fff;
   }
-  a:hover {
-    color: #747bff;
+
+.nav-steps{
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 14px;
+    color: hsl(var(--clr-lightblue));
+    margin-bottom: 4px;
+    
   }
-  button {
-    background-color: #f9f9f9;
+
+.nav-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1rem;
+    letter-spacing: 1px;
+    color: #fff
   }
+  
+  /* forms */
+
+  /* step 1 */
+.step1-form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+.step1-form input {
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 1px solid hsl(var(--clr-Coolgray))
+
+}
+
+.step1-form input::placeholder{
+    font-family: var(--ff-sanserif);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    padding-left: 1rem;
+    color: hsl(var(--clr-Coolgray));
+
+}
+
+.form-container h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    color: #022959;
+    margin-top: 2.8rem;
+}
+
+.form-container p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #9699AA;
+    margin-top: 11px;
+    margin-bottom: 35px;
+}
+
+.next-step {
+    margin-top: 52px;
+
+    width: 123px;
+    height: 48px;
+    background-color: hsl(var(--clr-marineblue));
+    color: #FFF;
+    border-radius: 8px;
+    border: none;
+    line-height: 18px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.next-step:hover {
+    background-color: hsl(var(--clr-lightblue));
+}
+
+.step1-label {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: #022959;
+}
+
+@media only screen and (min-width: 45em) {
+.step1-form input {
+        width: max(450px, 31.25%);
+        height: 3rem;
+    
+}  
 }
