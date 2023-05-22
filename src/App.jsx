@@ -3,6 +3,9 @@ import {Routes, Route, Link } from 'react-router-dom'
 import NotFound from './routes/NotFound';
 import Home from './routes/Home';
 import Step2 from './routes/Step2';
+import Step3 from './routes/Step3';
+import Step4 from './routes/Step4';
+import { FormProvider } from './FormContext';
 
 
 
@@ -10,6 +13,7 @@ function App() {
  
 
   return (
+    <FormProvider>
     <>
     <main className='flex' >
       <div className='flex' id="nav-form">
@@ -67,6 +71,8 @@ function App() {
       <Routes>
       <Route path="/" index element={<Home />} />
       <Route path="/step2" index element={<Step2 />} />
+      <Route path="/step3" index element={<Step3 />} />
+      <Route path="/step4" index element={<Step4 />} />
       
       <Route path="*" element={<NotFound />} />
       </Routes>
@@ -74,6 +80,7 @@ function App() {
     </main>
     
     </>
+    </FormProvider>
   )
 }
 

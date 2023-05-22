@@ -1,11 +1,16 @@
 // import { useState } from 'react';
 
+import { Link } from "react-router-dom"
+
 export default function Step2() {
 // const [selectedOption, setSelectedOption] = useState('');
 
 // const handleOptionClick = (option) => {
 //     setSelectedOption(option);
 // };
+function handleNextStep() {
+    return
+}
 
 return (
     <div className="form-container">
@@ -61,6 +66,14 @@ return (
             </label>
 
             <label className="ff-sanserif" id="labelRight">Yearly</label>
+        </div>
+
+        <div className="flex forward-back-btn" style={{
+            justifyContent: 'space-between',
+            alignItems: 'center'
+        }}>
+            <button className="ff-sanserif btn-back"><Link to="/">Go Back</Link></button>
+            <button type="button" onClick={handleNextStep} className="next-step ff-sanserif"><Link to="/step3">Next Step</Link></button>
         </div>
 
 
