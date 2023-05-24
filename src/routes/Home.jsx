@@ -5,42 +5,36 @@ import { FormContext } from '../FormContext';
 
 
 export default function Home() {
-    const [error, setError] = useState({
-        fullName: '',
-        email: '',
-        phone: ''
-    })
+    const [error, setError] = useState({})
 
-    function handleNextStep(e, preValue) {
+    function handleNextStep(e) {
         const errorName = document.getElementById('error1');
         const errorEmail = document.getElementById('error2');
         const errorPhone = document.getElementById('error3');
+
+        let errors = {}
+        
         if (!formData.fullName){
             e.preventDefault();
-            setError ({
-                ...preValue,
-                fullName: 'This field is required'
-            })
+            errors.fullName = 'This field is required'
             errorName.classList.remove('hide')
         }
 
         if (!formData.email){
             e.preventDefault();
-            setError ({
-                ...preValue,
-                email: 'This field is required'
-            })
+            errors.email = 'This field is required'
             errorEmail.classList.remove('hide')
 
         }
 
         if (!formData.phone){
             e.preventDefault();
-            setError ({
-                ...preValue,
-                phone: 'This field is required'
-            })
+            errors.phone = 'This field is required'
             errorPhone.classList.remove('hide');
+        }
+
+        if (Object.keys(errors).length > 0) {
+            setError(errors);
         }
 
 
@@ -51,6 +45,7 @@ export default function Home() {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         updateFormData({ [name]: value });
+        console.log(formData[name]);
   };
 
     return (
