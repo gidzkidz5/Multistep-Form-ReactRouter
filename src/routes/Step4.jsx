@@ -145,8 +145,8 @@ export default function Step4() {
             justifyContent: 'space-between',
             alignItems: 'center'
         }}>
-            <button className="ff-sanserif btn-back"><Link to="/step3">Go Back</Link></button>
-            <Link to="/confirmation"><button  type="button" onClick={handleNextStep} className="next-step ff-sanserif">Confirm</button></Link>
+            <button className="ff-sanserif btn-back"><Link to="../step3">Go Back</Link></button>
+            <Link to="../confirmation"><button  type="button" onClick={handleNextStep} className="next-step ff-sanserif">Confirm</button></Link>
         </div>
 
         </div>

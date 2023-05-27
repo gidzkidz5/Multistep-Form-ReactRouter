@@ -90,7 +90,7 @@ export default function Home() {
             <span className="ff-sanserif error" id="error3">{error.phone}</span>
 
             <div className="flex" style={{justifyContent: 'flex-end'}}>
-            <Link to="/step2"><button type="button" onClick={handleNextStep} className="next-step next-step1 ff-sanserif">Next Step</button></Link>
+            <Link to="step2"><button type="button" onClick={handleNextStep} className="next-step next-step1 ff-sanserif">Next Step</button></Link>
             </div>
         </form>
     </div>
