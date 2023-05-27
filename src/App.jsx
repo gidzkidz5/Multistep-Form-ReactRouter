@@ -25,7 +25,7 @@ function App() {
         <nav>
           <ul>
             <li>
-            <NavLink className='link' to="/gidzkidz5.github.io/Multistep-Form-ReactRouter" end>
+            <NavLink className='link' to="/" end>
               <div className='flex ff-sanserif'>
                 <button className='circular-button'>1</button>
                 <div className='uppercase'>
@@ -36,7 +36,7 @@ function App() {
             </NavLink>
             </li>
             <li>
-            <NavLink className='link' to="../gidzkidz5.github.io/Multistep-Form-ReactRouter/step2" >
+            <NavLink className='link' to="../step2" >
               <div className='flex ff-sanserif'>
                 <button className='circular-button'>2</button>
                 <div className='uppercase'>
@@ -47,7 +47,7 @@ function App() {
             </NavLink>
             </li>
             <li>
-            <NavLink className='link' to="../gidzkidz5.github.io/Multistep-Form-ReactRouter/step3" >
+            <NavLink className='link' to="../step3" >
               <div className='flex ff-sanserif'>
                 <button className='circular-button'>3</button>
                 <div className='uppercase'>
@@ -58,7 +58,7 @@ function App() {
             </NavLink>
             </li>
             <li>
-            <NavLink className='link' to="../gidzkidz5.github.io/Multistep-Form-ReactRouter/step4" >
+            <NavLink className='link' to="../step4" >
               <div className='flex ff-sanserif'>
                 <button className='circular-button'>4</button>
                 <div className='uppercase'>
@@ -73,7 +73,7 @@ function App() {
       </header>
 
       <Routes>
-      <Route path="gidzkidz5.github.io/Multistep-Form-ReactRouter" >
+      <Route path="/" >
         <Route index element={<Home />} />
         <Route path="step2" index element={<Step2 />} />
         <Route path="step3" index element={<Step3 />} />
