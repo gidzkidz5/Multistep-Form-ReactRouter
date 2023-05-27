@@ -77,7 +77,8 @@ main {
     max-height: 600px;
     padding: 1rem;
     background-color: #FFF;
-    gap: 12.0% ;
+    /* gap: 12.0% ; */
+    justify-content: space-between;
     
 }
 
@@ -214,6 +215,7 @@ li {
   .form-container {
    width: 49.8%;
    position: relative;
+   margin-right: 7%;
     
    
    
@@ -741,6 +743,8 @@ input[type="text"] {
     gap: 32px;
     justify-content: center;
     align-items: center;
+    width: 49.8%;
+    position: relative;
 }
 
 .confirmation-text-container {
@@ -770,7 +774,8 @@ input[type="text"] {
 @media only screen and (min-width: 45em) {
 
 .confirmation-container {
-        margin-right: 6.5rem;
+        /* margin-right: 6.5rem; */
+        margin-right: 7%;
     }
 }
 
