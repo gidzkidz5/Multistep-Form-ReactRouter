@@ -409,6 +409,7 @@ input[type="text"] {
 
 .selected {
     border: 2px solid hsl(var(--clr-purplishblue));
+    background-color: #F8F9FF;
 }
 
 
