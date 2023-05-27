@@ -51,6 +51,43 @@ export default function Step4() {
         }
     }
 
+    function totalCost() {
+        let sum = 0;
+        let tierMonthCost;
+        switch (formData.tier) {
+            case 'option1':
+                tierMonthCost = 9
+                break;
+            case 'option2':
+                tierMonthCost = 12
+                break;
+            case 'option3':
+                tierMonthCost = 15
+                break;
+            default:
+                break;
+        }
+        if (!formData.monthly){
+            sum = tierMonthCost * 10
+        } else {
+            sum = tierMonthCost
+        }
+        // tier cost
+        
+
+        formData.addOns.forEach(item => {
+            if (item.selected) {
+                if (formData.monthly) {
+                    sum += item.monthCost
+                } else {
+                    sum += item.yearCost
+                }
+            }
+        });
+
+        return sum
+    }
+
 
 
     return (
@@ -65,7 +102,7 @@ export default function Step4() {
             <div className="flex top-summary-container-child ff-sanserif">
                 <div className="flex top-summary-text">
                     <h1>{optionChoice()} ({formData.monthly ? 'Monthly' : 'Yearly'})</h1>
-                    <h2>Change</h2>
+                    <h2><Link to="/step2">Change</Link></h2>
                 </div>
                 <div><h1 className="top-summary-cost ff-sanserif">{optionCost()}{formData.monthly ? '/mo' : '/yr'}</h1></div>
             </div>
@@ -98,8 +135,8 @@ export default function Step4() {
         </div>
 
         <div className="flex summary-cost">
-                <h1 className="ff-sanserif">Total (per year)</h1>
-                <h2 className="ff-sanserif">$120/yr</h2>
+                <h1 className="ff-sanserif">Total (per {formData.monthly ? 'month' : 'year'})</h1>
+                <h2 className="ff-sanserif">${totalCost()}/{formData.monthly ? 'mo' : 'yr'}</h2>
         </div>
 
     </div>
@@ -109,7 +146,7 @@ export default function Step4() {
             alignItems: 'center'
         }}>
             <button className="ff-sanserif btn-back"><Link to="/step3">Go Back</Link></button>
-            <button type="button" onClick={handleNextStep} className="next-step ff-sanserif">Confirm</button>
+            <Link to="/confirmation"><button  type="button" onClick={handleNextStep} className="next-step ff-sanserif">Confirm</button></Link>
         </div>
 
         </div>

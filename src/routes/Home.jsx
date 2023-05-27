@@ -7,6 +7,13 @@ import { FormContext } from '../FormContext';
 export default function Home() {
     const [error, setError] = useState({})
 
+    function validateEmail(email) {
+        // Regular expression for email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        return emailRegex.test(email);
+      }
+
     function handleNextStep(e) {
         const errorName = document.getElementById('error1');
         const errorEmail = document.getElementById('error2');
@@ -24,7 +31,12 @@ export default function Home() {
             e.preventDefault();
             errors.email = 'This field is required'
             errorEmail.classList.remove('hide')
+        }
 
+        if (!validateEmail(formData.email)) {
+            e.preventDefault();
+            errors.email = 'Invalid email format'
+            errorEmail.classList.remove('hide')
         }
 
         if (!formData.phone){

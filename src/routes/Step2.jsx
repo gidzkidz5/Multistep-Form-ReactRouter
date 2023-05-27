@@ -46,8 +46,8 @@ return (
             </div>
                 <div className="plan-text-container">
                     <h1>Arcade</h1>
-                    <p>$9/mo</p>
-                    <span className="free-months">2 months free</span>
+                    <p>${formData.monthly ? '9/mo' : '90/yr'}</p>
+                    <span className="free-months" style={!formData.monthly ? {visibility: "visible"} : {visibility: "hidden"}}>2 months free</span>
                 </div>
             </div>
 
@@ -57,8 +57,8 @@ return (
             </div>
                 <div className="plan-text-container">
                     <h1>Advanced</h1>
-                    <p>$12/mo</p>
-                    <span className="free-months">2 months free</span>
+                    <p>${formData.monthly ? '12/mo' : '120/yr'}</p>
+                    <span className="free-months" style={!formData.monthly ? {visibility: "visible"} : {visibility: "hidden"}}>2 months free</span>
                 </div>
             </div>
 
@@ -69,8 +69,8 @@ return (
 
                 <div className="plan-text-container">
                     <h1 >Pro</h1>
-                    <p>$15/mo</p>
-                    <span className="free-months">2 months free</span>
+                    <p>${formData.monthly ? '15/mo' : '150/yr'}</p>
+                    <span className="free-months" style={!formData.monthly ? {visibility: "visible"} : {visibility: "hidden"}}>2 months free</span>
                 </div>
             </div>
         </div>

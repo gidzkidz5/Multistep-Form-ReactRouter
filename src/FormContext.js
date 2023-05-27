@@ -12,7 +12,7 @@ export const FormProvider = ({ children }) => {
     3: false,
     addOns: [
       { id: 1, addOn: 'Online Service', monthCost: 1, yearCost: 10, month: true, selected: false},
-      { id: 2, addOn: 'Larger Storage', monthCost: 2, yearCost: 10, month: true, selected: false },
+      { id: 2, addOn: 'Larger Storage', monthCost: 2, yearCost: 20, month: true, selected: false },
       { id: 3, addOn: 'Customizable Profile', monthCost: 2, yearCost: 20, month: true, selected: false  }
     ]
   }

@@ -77,7 +77,16 @@ main {
     max-height: 600px;
     padding: 1rem;
     background-color: #FFF;
-    gap: 14%;
+    gap: 12.0% ;
+    
+}
+
+@media only screen and (min-width: 45em) and (max-width: 75em) {
+    #nav-form {
+        
+        gap: 5% ;
+        
+    }
 }
 
 @media only screen and (max-width: 35em) {
@@ -193,8 +202,24 @@ li {
     letter-spacing: 1px;
     color: #fff
   }
+
+.link.active div .circular-button{
+    background-color: #BEE2FD;
+    color: #022959;
+    border-color: #BEE2FD;
+}
   
   /* forms */
+  @media only screen and (min-width:35em) {
+  .form-container {
+   width: 49.8%;
+   position: relative;
+    
+   
+   
+    
+}
+  }
 
 
   /* step 1 */
@@ -310,6 +335,7 @@ input[type="text"] {
 @media only screen and (min-width: 45em) {
 .step1-form input {
         width: max(450px, 31.25%);
+        width: auto;
         height: 3rem;
     
 }  
@@ -342,22 +368,41 @@ input[type="text"] {
 /* step 2 */
 .plan-type-container {
     gap:1.125rem;
-    width: fit-content;
-    max-width: fit-content;
+    width: 100%;
+    min-width: 100%;
+    
 }
 .plan-type-child {
+    box-sizing: border-box;
     flex-direction: column;
     gap: 2.0rem;
     padding-top: 20px;
     padding-bottom: 1rem;
     padding-left: 1rem;
-    padding-right: 2.85rem;
+    padding-right: clamp(1rem, 2.85rem, 2.85rem);
     border-radius: 10px;
     border: 2px solid hsl(var(--clr-Lightgray));
     max-height: 11rem;
+    /* width: calc(12ch + 3rem) */
+    min-width: fit-content;
     
 }
 
+@media only screen and (min-width: 35.01rem) and (max-width: 81rem){
+    .plan-type-container {
+        flex-direction: column;
+        width: auto;
+        height: auto;
+
+    }
+
+    .plan-type-child {
+        flex-direction: row;
+        max-height: 4rem;
+        align-items: center;
+        padding-block: 10px;
+    }
+}
 .plan-type-child:hover {
     border: 2px solid hsl(var(--clr-purplishblue));
 }
@@ -395,6 +440,7 @@ input[type="text"] {
     line-height: 14px;
     color: #022959;
     margin-top: 7px;
+    
 }
 
 .duration-container {
@@ -485,9 +531,13 @@ input[type="text"] {
     border-radius: 50%;
   }
 
+  @media only screen and (min-width: 45em) {
   .forward-back-btn {
-    margin-top: 5.5rem;
+    position: absolute;
+    width: 100%;
+    bottom: 32px;
   }
+}
 
   .btn-back {
     background: #FFF;
@@ -510,7 +560,7 @@ input[type="text"] {
     cursor: pointer;
   }
 
-@media only screen and (max-width: 35em) {
+@media only screen and (max-width: 45em) {
     .plan-type-container{
         flex-direction: column;
         /* justify-content: center; */
@@ -528,6 +578,10 @@ input[type="text"] {
         /* max-height: 75px; */
         
     }
+
+    .forward-back-btn {
+        margin-top: 5.5rem;
+      }
 }
 
 /* step 3 */
@@ -679,3 +733,50 @@ input[type="text"] {
     color: #483EFF;
 }
 
+/* Confirmation */
+
+.confirmation-container {
+    flex-direction: column;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-text-container {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.confirmation-text-container h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 37px;
+    text-align: center;
+    color: #022959;
+
+}
+
+.confirmation-text-container p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 25px;
+    text-align: center;
+    color: #9699AA;
+}
+
+
+@media only screen and (min-width: 45em) {
+
+.confirmation-container {
+        margin-right: 6.5rem;
+    }
+}
+
+@media only screen and (max-width: 45em) {
+
+.confirmation-container {
+    margin-inline: 1.5rem;
+    margin-top: 5rem;
+}
+}
