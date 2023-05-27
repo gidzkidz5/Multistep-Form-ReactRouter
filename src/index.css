@@ -387,6 +387,7 @@ input[type="text"] {
     max-height: 11rem;
     /* width: calc(12ch + 3rem) */
     min-width: fit-content;
+    cursor: pointer;
     
 }
 
