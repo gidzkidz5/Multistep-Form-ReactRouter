@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gidzkidz5.github.io/Multistep-Form-ReactRouter/static/css/main.6a743cfc.css",
+    "main.js": "/gidzkidz5.github.io/Multistep-Form-ReactRouter/static/js/main.b90bbe87.js",
+    "static/media/bg-sidebar-desktop.svg": "/gidzkidz5.github.io/Multistep-Form-ReactRouter/static/media/bg-sidebar-desktop.6918153f38678372ceb1.svg",
+    "static/media/bg-sidebar-mobile.svg": "/gidzkidz5.github.io/Multistep-Form-ReactRouter/static/media/bg-sidebar-mobile.ad41661b40ca0b967f3a.svg",
+    "index.html": "/gidzkidz5.github.io/Multistep-Form-ReactRouter/index.html",
+    "main.6a743cfc.css.map": "/gidzkidz5.github.io/Multistep-Form-ReactRouter/static/css/main.6a743cfc.css.map",
+    "main.b90bbe87.js.map": "/gidzkidz5.github.io/Multistep-Form-ReactRouter/static/js/main.b90bbe87.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6a743cfc.css",
+    "static/js/main.b90bbe87.js"
+  ]
+}
